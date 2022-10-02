@@ -1,3 +1,6 @@
+// This function waits for the DOM to load. then looks for an
+// element with the if of "calc-form". If the element exists
+// run setUpinitialValues()
 window.addEventListener('DOMContentLoaded', function() {
   const form = document.getElementById("calc-form");
   if (form) {
@@ -9,6 +12,7 @@ window.addEventListener('DOMContentLoaded', function() {
   }
 });
 
+// Get current vlaues from form inputs
 function getCurrentUIValues() {
   return {
     amount: +(document.getElementById("loan-amount").value),
